@@ -153,6 +153,9 @@ class CustomStylesController < ApplicationController
       send_file(@custom_style.send(path_method))
       send_file(@custom_style.send(path_method))
       send_file(@custom_style.send(path_method))
+      send_file(@custom_style.send(path_method))
+      send_file(@custom_style.send(path_method))
+      send_file(@custom_style.send(path_method))
     else
       head :not_found
     end
