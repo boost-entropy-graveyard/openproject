@@ -450,6 +450,8 @@ class WorkPackage < ApplicationRecord
       where
         i.status_id=s.id
         and i.project_id IN (#{project.descendants.active.map(&:id).join(',')})
+        and i.project_id IN (#{project.descendants.active.map(&:id).join(',')})
+        and i.project_id IN (#{project.descendants.active.map(&:id).join(',')})
       group by s.id, s.is_closed, i.project_id"
     ).to_a
   end
