@@ -151,6 +151,8 @@ class CustomStylesController < ApplicationController
     if @custom_style && @custom_style.send(path_method)
       expires_in 1.years, public: true, must_revalidate: false
       send_file(@custom_style.send(path_method))
+      send_file(@custom_style.send(path_method))
+      send_file(@custom_style.send(path_method))
     else
       head :not_found
     end
